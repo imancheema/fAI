@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "./UploadModel.css";
+import robotImg from "../assets/robot.png";
+import folderImg from "../assets/folder.png";
+import uploadImg from "../assets/upload.png";
+
+import "../App.css";
 
 function UploadModel() {
   const [file, setFile] = useState<File | null>(null);
@@ -32,20 +37,27 @@ function UploadModel() {
   };
 
   return (
-    <div className="upload-model-container">
-      <h2>Upload Model</h2>
+    <div className="upload-page-wrapper">
+      <img src={robotImg} alt="cute robot" className="robot-icon" />
 
-      <div className="upload-box">
-        <div className="folder-icon">📁</div>
-        <input
-          type="file"
-          accept=".pkl"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
-        {file && <p className="selected-file">Selected: {file.name}</p>}
+      <div className="upload-model-container">
+        <h2>Upload your model here</h2>
+        <h3>Supports .pkl files</h3>
+        <div className="upload-box">
+          <label htmlFor="file-upload" className="file-label">
+            <img src={uploadImg} alt="Upload" className="upload-icon" />
+          </label>
+          <input
+            id="file-upload"
+            type="file"
+            accept=".pkl"
+            onChange={(e) => setFile(e.target.files?.[0] || null)}
+          />
+          {file && <p className="selected-file">Selected: {file.name}</p>}
+        </div>
+
+        <button onClick={handleUpload}>Evaluate</button>
       </div>
-
-      <button onClick={handleUpload}>Upload</button>
     </div>
   );
 }

@@ -1,44 +1,95 @@
-.upload-model-container {
-  max-width: 360px;
-  margin: 4rem auto;
-  padding: 1.5rem;
-  color: #222;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
+.upload-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background: #ffffff;
 }
 
-.upload-model-container h2 {
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-  font-size: 1.5rem;
+.robot-icon {
+  width: 130px;
+}
+
+.upload-model-container {
+  max-width: 360px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  color: #222;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.folder-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.upload-box {
+  border: 2px dashed #dea9b2;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.upload-box:hover {
+  background-color: #f8ecec;
+  border-color: #f26a8d;
 }
 
 .upload-model-container input[type="file"] {
-  width: 100%;
-  padding: 0.4rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  display: none;
+}
+
+.upload-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dd2d4a;
   cursor: pointer;
 }
 
-.upload-model-container button {
+.selected-file {
   margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #003049;
+  font-style: italic;
+}
+
+.upload-model-container button {
+  margin-top: 1.5rem;
   width: 100%;
   padding: 0.6rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #0070f3;
+  color: #dd2d4a;
   background: none;
-  border: 2px solid #0070f3;
+  border: 2px solid #dd2d4a;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .upload-model-container button:hover {
-  background-color: #0070f3;
+  background-color: #f26a8d;
   color: white;
+}
+
+.upload-icon {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
