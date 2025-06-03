@@ -14,7 +14,7 @@
   align-items: center;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #553c9a; /* soft purple */
+  color: #e63946;
 }
 
 .phi {
@@ -34,10 +34,6 @@
   font-weight: 500;
   position: relative;
   transition: all 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #553c9a;
 }
 
 .nav-links a::before {
