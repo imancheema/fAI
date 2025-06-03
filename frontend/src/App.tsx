@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import UploadModel from "./screens/UploadModel";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/hello")
-      .then((response) => response.json())
-      .then((data) => setMessage(data.message))
-      .catch((err) => setMessage("Error fetching message"));
-  }, []);
-
   return (
-    <div>
-      <h1>React + Flask Example</h1>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<UploadModel />} />
+      </Routes>
+    </Router>
   );
 }
 
