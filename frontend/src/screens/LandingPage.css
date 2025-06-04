@@ -1,0 +1,91 @@
+.landing-wrapper {
+  font-family: "Poppins", sans-serif;
+  color: #32000c;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.landing-header {
+  background: #ffffff;
+  padding: 1rem 2rem;
+}
+
+.landing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.text-section .subtitle {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #ea2a5d;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.text-section p {
+  font-size: 1rem;
+  color: #494444;
+  line-height: 1.6;
+}
+
+/* Image on the Right */
+
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.get-started-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #040001;
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #32000c;
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .image-section {
+    width: 100%;
+  }
+}
