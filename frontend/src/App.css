@@ -2,34 +2,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 h1 {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 0;
   margin: 0;
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-size: 1.5rem;
   padding: 0;
   margin: 0;
+  color: #32000c;
 }
 
 h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #555;
+  color: #989797;
   padding: 0;
   margin: 0;
-  padding-bottom: 1em;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+
   color: #222;
-  overflow-y: hidden; /*may cause issues later!?*/
 }
