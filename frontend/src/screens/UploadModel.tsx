@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./UploadModel.css";
 import robotImg from "../assets/robot.png";
 import folderImg from "../assets/folder.png";
@@ -7,6 +8,7 @@ import uploadImg from "../assets/upload.png";
 import "../App.css";
 
 function UploadModel() {
+  const navigate = useNavigate();
   const [file, setFile] = useState<File | null>(null);
 
   const handleUpload = async () => {
@@ -26,7 +28,7 @@ function UploadModel() {
 
       const data = await response.json();
       if (response.ok) {
-        alert(data.message);
+        navigate("/evaluate");
       } else {
         alert(`Upload failed: ${data.error}`);
       }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   background: #ffffff;
@@ -57,7 +57,7 @@
 .upload-label {
   font-size: 1rem;
   font-weight: 600;
-  color: #dd2d4a;
+  color: #ea2a5d;
   cursor: pointer;
 }
 
@@ -74,9 +74,9 @@
   padding: 0.6rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #dd2d4a;
+  color: #ea2a5d;
   background: none;
-  border: 2px solid #dd2d4a;
+  border: 2px solid #ea2a5d;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
