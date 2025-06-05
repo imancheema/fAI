@@ -1,0 +1,99 @@
+.makefair-wrapper {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    background: #fff;
+    color: #32000c;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .stepper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .step {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #ea2a5d;
+    border: 2px solid #ea2a5d;
+    background-color: #fff;
+    font-size: 0.9rem;
+  }
+  .step.current {
+    background-color: #ea2a5d;
+    color: white;
+  }
+  .step.active::before {
+    content: \"✓ \";
+    font-weight: bold;
+  }
+  
+  .makefair-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff6f8;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease;
+  }
+  
+  .robot-img {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .typing-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #ea2a5d;
+    animation: typing 2s steps(30, end);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ea2a5d;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  .summary-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .submit-btn {
+    background-color: #ea2a5d;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .submit-btn:hover {
+    background-color: #32000c;
+  }
+  
+  .success-message {
+    font-size: 1rem;
+    color: green;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  
