@@ -1,3 +1,4 @@
+// src/screens/LandingPage.tsx
 import React from "react";
 import heroImg from "../assets/hero.png";
 import "./LandingPage.css";
@@ -5,19 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const handleGetStarted = () => {
-    navigate("/upload");
-  };
+  const handleGetStarted = () => navigate("/upload");
 
   return (
     <div className="landing-wrapper">
       <header className="landing-header">
         <div className="landing-content">
-          {/* Text Section */}
           <div className="text-section">
             <h1>
-              Does your AI <span className="highlight">judge a book</span> by
-              its cover?
+              Does your AI <span className="highlight">judge a book</span> by its cover?
             </h1>
             <h2 className="subtitle">
               Because great resumes don't all look the same.
@@ -31,8 +28,6 @@ const LandingPage = () => {
               🚀 Get Started
             </button>
           </div>
-
-          {/* Image Section */}
           <div className="image-section">
             <img
               src={heroImg}
