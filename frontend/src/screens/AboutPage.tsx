@@ -1,25 +1,20 @@
 // src/screens/AboutPage.tsx
-// @ts-nocheck
-
 import React from "react";
 import equityImg from "../assets/equity.png";
 import "./LandingPage.css";
 
-const AboutPage = () => {
-  return (
-    <div className="section-page">
-      <h1 className="section-title">🤖 About Us</h1>
-      <p className="section-paragraph">
-        We are a student-built AI for good project — built during the AI4Good Fellowship.
-        Our mission is to equip organizations with tools to understand and fix hidden bias in their resume screening models.
-      </p>
-      <img src={equityImg} alt="Equity illustration" className="section-image" />
-      <p className="section-paragraph">
-        Whether you're a company, policymaker, or ML practitioner — we want to make AI accountability accessible, fair, and usable.
-        We're passionate about fairness, transparency, and real-world impact.
-      </p>
-    </div>
-  );
-};
+const AboutPage = () => (
+  <div className="section-page genz-bg">
+    <h1 className="section-title rainbow-text">✨ Who Are We?</h1>
+    <p className="section-paragraph">
+      We’re a squad of AI dreamers, code wizards, and fairness fanatics. Born at the AI4Good Fellowship, we’re here to make sure AI opens doors for everyone—not just the usual suspects.
+    </p>
+    <img src={equityImg} alt="Equity illustration" className="section-image floating-img" />
+    <p className="section-paragraph">
+      Our vibe? <b>Radical transparency.</b> Our mission? <b>Level the playing field.</b> Our promise? <b>AI that’s actually for good.</b>
+      <br /><span className="emoji-burst">🚀🤖🌈</span>
+    </p>
+  </div>
+);
 
 export default AboutPage;
