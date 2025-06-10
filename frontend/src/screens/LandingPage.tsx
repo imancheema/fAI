@@ -14,18 +14,19 @@ const LandingPage = () => {
         <div className="landing-content">
           <div className="text-section">
             <h1>
-              Does your AI <span className="highlight">judge a book</span> by its cover?
+              Does your AI <span className="highlight">judge a book</span> by
+              its cover?
             </h1>
             <h2 className="subtitle">
               Because great resumes don't all look the same.
             </h2>
             <p>
-              Upload your resume screening model and instantly see how it performs
-              across gender, ethnicity, and more. No guesswork — just clean fairness
-              scores and actionable insights to help you build better AI.
+              Upload your resume screening model, and we’ll help you uncover how
+              fair they truly are. No fluff, just quick fairness metrics and
+              clear results so you can see if your AI is playing fair.
             </p>
             <button className="get-started-btn" onClick={handleGetStarted}>
-              🚀 Get Started
+              Get Started
             </button>
           </div>
           <div className="image-section">
