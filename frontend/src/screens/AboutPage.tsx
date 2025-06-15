@@ -1,29 +1,26 @@
-// src/screens/AboutPage.tsx
 import React from "react";
 import equityImg from "../assets/equity.png";
-import "./ProblemPage.css"; // Reusing the same styles
+import "./ProblemPage.css";
 
 const AboutPage = () => (
   <div className="page-wrapper">
     <div className="content-container">
-      <h1 className="problem-title">✨ Who Are We?</h1>
+      <h1 className="problem-title">Who Are We?</h1>
       <p className="body-text">
-        We’re a squad of AI dreamers, code wizards, and fairness fanatics. Born
-        at the AI4Good Fellowship, we’re here to make sure AI opens doors for
-        everyone—not just the usual suspects.
+        We are part of the AI4Good Fellowship, a community dedicated to using
+        artificial intelligence for positive social impact. Our team focuses on
+        making hiring fairer and more transparent by helping companies identify
+        and reduce bias in their resume screening models.
       </p>
-      <img
+      <p className="body-text">
+        We believe that everyone deserves a fair chance to showcase their
+        talents, and our tools aim to support more equitable hiring practices.
+      </p>
+      {/* <img
         src={equityImg}
         alt="Equity illustration"
         className="content-image"
-      />
-      <p className="body-text">
-        Our vibe? <b>Radical transparency.</b> Our mission?{" "}
-        <b>Level the playing field.</b> Our promise?{" "}
-        <b>AI that’s actually for good.</b>
-        <br />
-        <span role="img" aria-label="emoji-burst"></span>
-      </p>
+      /> */}
     </div>
   </div>
 );
