@@ -1,0 +1,93 @@
+.debias-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tier-card {
+  background: #fff;
+  border: 2px solid #bca7f5;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(180, 140, 255, 0.1);
+}
+
+.tier-card h3 {
+  color: #7e57c2;
+  margin-bottom: 0.8rem;
+  font-family: "barlow", sans-serif;
+  font-size: 25px;
+}
+
+.tier-card ul {
+  list-style-type: none;
+  padding-left: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.fair-ai-badge-info {
+  background-color: #fdf9d6;
+  padding: 1.2rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #5c4a82;
+  /* border: 1.5px dashed #bca7f5; */
+}
+
+.icon {
+  color: #7e57c2;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.choose-tier-btn {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-tier-btn:hover {
+  background-color: #5a3880;
+}
+
+.confirmation-message {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #388e3c; /* green */
+  font-size: 1rem;
+  text-align: left;
+}
+
+.tier-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  color: #cca5ce;
+  transition: color 0.3s ease;
+}
+
+.tier-title:hover .tier-icon {
+  color: #a18fff;
+}
+
+.tier-icon-badge {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 8px;
+  color: #cca5ce;
+  font-size: 2em;
+  line-height: none;
+}
