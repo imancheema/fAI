@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #6d247a;
+  --secondary-color: #9e66d0;
+  --button-color: black;
+  --background-color: #ffffff;
+  --muted-color: #5f6368;
+}
 
 h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-family: "poppins", serif;
+  font-weight: 900;
   font-size: 3rem;
   padding: 0;
   margin: 0;
@@ -15,14 +27,13 @@ h2 {
   font-size: 1.5rem;
   padding: 0;
   margin: 0;
-  color: #32000c;
+  color: var(--secondary-color);
 }
 
 h3 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #989797;
   padding: 0;
   margin: 0;
 }
@@ -30,6 +41,4 @@ h3 {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-
-  color: #222;
 }
