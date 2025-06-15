@@ -1,25 +1,24 @@
-/* === NAVBAR LAYOUT === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem;
-  background-color: white;
-  border-bottom: 2px solid #f9d7dd;
-  box-shadow: 0 5px 15px rgba(234, 42, 93, 0.08); /* soft pink glow */
+  padding: 0rem 2rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #cec9cf;
+  box-shadow: 0 5px 15px rgba(193, 99, 182, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
-  font-family: "Poppins", sans-serif;
+  font-family: "barlow", sans-serif;
 }
 
 /* === LOGO === */
 .logo {
-  margin-left: 1rem;
+  margin: 0.6em;
 }
 
 .logo-image {
-  height: 60px;
+  height: 50px;
   width: auto;
 }
 
@@ -39,28 +38,13 @@
   transition: all 0.3s ease;
 }
 
-.nav-links a.active {
-  color: #ea2a5d;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background-color: #ea2a5d;
-  transition: width 0.3s ease;
-}
-
 .nav-links a:hover::after {
   width: 100%;
 }
 
 /* === CONTACT US BUTTON === */
 .contact-btn {
-  background: linear-gradient(90deg, #ea2a5d, #ff6e91);
+  background: var(--button-color);
   border: none;
   border-radius: 30px;
   padding: 0.5rem 1.25rem;
@@ -68,13 +52,8 @@
   font-size: 0.9rem;
   color: white;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(234, 42, 93, 0.3);
   transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-  transform: scale(1.04) translateY(-1px);
-  background: linear-gradient(90deg, #ff6e91, #ea2a5d);
+  font-family: "barlow", sans-serif;
 }
 
 /* === CONTACT MODAL === */

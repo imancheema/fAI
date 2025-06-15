@@ -17,12 +17,22 @@ function Navbar() {
         </div>
 
         <div className="nav-links">
-          <Link to="/problem" className={location.pathname === "/problem" ? "active" : ""}>Problem</Link>
-          <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About</Link>
+          <Link
+            to="/problem"
+            className={location.pathname === "/problem" ? "active" : ""}
+          >
+            Problem
+          </Link>
+          <Link
+            to="/about"
+            className={location.pathname === "/about" ? "active" : ""}
+          >
+            About
+          </Link>
 
           {/* ✅ Replace Get Started with Contact Us */}
           <button className="contact-btn" onClick={() => setShowForm(true)}>
-            💬 Contact Us
+            Contact Us
           </button>
         </div>
       </nav>
@@ -32,16 +42,25 @@ function Navbar() {
         <div className="modal-overlay" onClick={() => setShowForm(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h2>Let's Chat 🤝</h2>
-            <p className="subtitle">Tell us what you're building — and how we can help!</p>
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks! We’ll get back to you shortly 🚀");
-              setShowForm(false);
-            }}>
+            <p className="subtitle">
+              Tell us what you're building — and how we can help!
+            </p>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Thanks! We’ll get back to you shortly 🚀");
+                setShowForm(false);
+              }}
+            >
               <input type="text" placeholder="Your Name" required />
               <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="What's your use case? Ask us anything!" required />
-              <button type="submit" className="submit-btn">✨ Send Message</button>
+              <textarea
+                placeholder="What's your use case? Ask us anything!"
+                required
+              />
+              <button type="submit" className="submit-btn">
+                ✨ Send Message
+              </button>
             </form>
           </div>
         </div>
