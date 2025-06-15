@@ -76,20 +76,24 @@
   border-radius: 20px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(193, 99, 182, 0.25); /* soft purple shadow */
   animation: fadeInUp 0.4s ease;
   text-align: center;
+  border: 1px solid #e3d3ea; /* light lavender border */
 }
 
 .modal h2 {
   margin-bottom: 0.5rem;
-  color: #ea2a5d;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
 .modal .subtitle {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
 }
 
 .modal form {
@@ -104,6 +108,7 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 0.95rem;
+  font-family: "barlow", sans-serif;
 }
 
 .modal textarea {
@@ -113,24 +118,25 @@
 
 .modal input:focus,
 .modal textarea:focus {
-  outline: 2px solid #ea2a5d;
-  border-color: #ea2a5d;
-  box-shadow: 0 0 0 3px rgba(234, 42, 93, 0.1);
+  outline: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(193, 99, 182, 0.15);
 }
 
 .submit-btn {
-  background: #ea2a5d;
+  background: var(--button-color);
   color: white;
   padding: 0.65rem 1rem;
   border: none;
   border-radius: 30px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .submit-btn:hover {
-  background: #d91f4e;
+  background: #5a3880; /* slightly deeper purple */
+  transform: translateY(-2px);
 }
 
 /* === ANIMATION === */

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import "./Navbar.css";
+import { MdChatBubbleOutline } from "react-icons/md";
 
 function Navbar() {
   const location = useLocation();
@@ -29,26 +30,36 @@ function Navbar() {
           >
             About
           </Link>
-
-          {/* ✅ Replace Get Started with Contact Us */}
           <button className="contact-btn" onClick={() => setShowForm(true)}>
             Contact Us
           </button>
         </div>
       </nav>
 
-      {/* Modal for Contact */}
       {showForm && (
         <div className="modal-overlay" onClick={() => setShowForm(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h2>Let's Chat 🤝</h2>
+            <h2>
+              <span
+                style={{
+                  verticalAlign: "middle",
+                  marginRight: 8,
+                  color: "var(--primary-color)",
+                  fontSize: "1.4rem",
+                  display: "inline-flex",
+                }}
+              >
+                <MdChatBubbleOutline />
+              </span>
+              Let's Chat
+            </h2>
             <p className="subtitle">
-              Tell us what you're building — and how we can help!
+              Tell us what you're building and how we can help!
             </p>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thanks! We’ll get back to you shortly 🚀");
+                alert("Thanks! We will get back to you shortly.");
                 setShowForm(false);
               }}
             >
@@ -59,7 +70,7 @@ function Navbar() {
                 required
               />
               <button type="submit" className="submit-btn">
-                ✨ Send Message
+                Send Message
               </button>
             </form>
           </div>
