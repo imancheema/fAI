@@ -14,10 +14,11 @@ const ProblemPage = () => {
         </p>
 
         <p className="body-text">
-          AI is widely used to screen resumes, but biased training data or model
-          design can lead to unfair outcomes for underrepresented groups. Our
-          goal is to uncover these hidden biases and help organizations build
-          ethical, transparent, and fair hiring tools.
+          AI is now widely used to screen resumes and streamline hiring, but
+          biased training data or flawed model design can lead to unfair
+          outcomes, especially for underrepresented groups. Our goal is to
+          uncover these hidden biases and help organizations build ethical,
+          transparent, and fair hiring tools.
         </p>
         <img
           src={Problem}
@@ -27,23 +28,21 @@ const ProblemPage = () => {
 
         <h2 className="section-heading">What is the problem?</h2>
         <p className="body-text">
-          Automated resume screening tools aim to streamline hiring, but many
-          adopt biases from the data they’re trained on.
-        </p>
-        <p className="body-text">
           In 2018, Amazon abandoned its AI recruiting tool after it penalized
-          resumes with terms like 'women’s' or from all-women’s colleges — a
-          result of training on male-dominated hiring data. These tools often
-          operate with little transparency, raising key questions: Who gets
-          excluded? Who gets advanced? And why?"
+          resumes with terms like 'women’s' or from all-women’s colleges. This
+          was the result of training on male-dominated hiring data. These tools
+          often operate with little transparency, raising key questions: Who
+          gets excluded? Who gets advanced? And why?
         </p>
 
         <h2 className="section-heading">Why does it matter?</h2>
         <p className="body-text">
-          Biased AI in hiring reinforces inequality and excludes qualified
-          candidates. This harms individuals and impacts diversity, innovation,
-          and reputation. As automation grows, fairness is crucial for trust and
-          competitiveness.
+          Gender-biased AI in hiring can unfairly exclude qualified candidates,
+          especially women and gender-diverse individuals. This reinforces
+          inequality, reduces diversity, and can harm an organization’s
+          reputation and legal standing. As automation becomes more common,
+          addressing gender bias is essential for fairness, trust, and long-term
+          success.
         </p>
 
         <h2 className="section-heading">How do we help?</h2>
