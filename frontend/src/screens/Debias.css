@@ -64,9 +64,10 @@
 .confirmation-message {
   margin-top: 1rem;
   font-weight: 600;
-  color: #388e3c; /* green */
+  color: #12b61a;
   font-size: 1rem;
   text-align: left;
+  margin: 8px;
 }
 
 .tier-icon {

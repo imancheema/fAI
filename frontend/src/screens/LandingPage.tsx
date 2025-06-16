@@ -15,9 +15,9 @@ const LandingPage = () => {
       <header className="landing-header">
         <div className="landing-content">
           <div className="text-section">
-            <h1>Your Model Makes Decisions. But Are They Fair?</h1>
+            <h1>Your AI Screens Resumes. But Is It Fair?</h1>
             <h2 className="subtitle">
-              Because fair decisions start with fair algorithms.
+              Because every candidate deserves an equal chance.
             </h2>
             {/* <p>
               Upload your resume screening model, and we’ll help you uncover how

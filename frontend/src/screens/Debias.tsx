@@ -53,7 +53,7 @@ const Debias = () => {
 
         {chosenTiers[1] ? (
           <p className="confirmation-message">
-            ✅ Debiasing request received. We'll notify you when it's done.
+            Debiasing request received. We'll notify you when it's done.
           </p>
         ) : (
           <button
@@ -97,7 +97,7 @@ const Debias = () => {
 
         {chosenTiers[2] ? (
           <p className="confirmation-message">
-            ✅ Debiasing request received. We'll notify you when it's done.
+            Debiasing request received. We'll notify you when it's done.
           </p>
         ) : (
           <button
