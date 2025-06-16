@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useModelContext } from "../contexts/ModelContext";
 import { useNavigate } from "react-router-dom";
 import Steps from "../components/Steps";
@@ -13,6 +13,12 @@ function UploadModel() {
   const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    setModelFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  }, [setModelFile]);
   const handleUpload = () => {
     if (!modelFile) {
       alert("Please select a model file.");
