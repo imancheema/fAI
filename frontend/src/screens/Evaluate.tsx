@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PieChart } from "react-minimal-pie-chart";
 import { useModelContext } from "../contexts/ModelContext";
 import Steps from "../components/Steps";
+import DashboardMetrics from "../components/DashboardMetrics";
 
 import "./EvaluatePage.css";
 
 const EvaluatePage = () => {
   const { modelFile } = useModelContext();
   const navigate = useNavigate();
+
+  const [task, setTask] = useState("resume-screening");
+
+  const tasks = [
+    { value: "resume-screening", label: "Resume Screening" },
+    { value: "candidate-ranking", label: "Candidate Ranking" },
+    { value: "skill-assessment", label: "Skill Assessment" },
+    { value: "interview-scheduling", label: "Interview Scheduling" },
+    {
+      value: "employee-engagement",
+      label: "Employee Engagement",
+    },
+  ];
 
   return (
     <div>
@@ -22,16 +36,27 @@ const EvaluatePage = () => {
           </p>
         </section>
 
-        <div className="model-card">
+        <div>
           <p>
-            <strong>Model:</strong> {modelFile?.name || "No model uploaded"}
+            <span className="model-title">Model:</span>{" "}
+            {modelFile?.name || "No model uploaded"}
           </p>
+
           <p>
-            <strong>Task:</strong> Resume Screening
+            <span className="model-title">Task:</span>{" "}
+            <select value={task} onChange={(e) => setTask(e.target.value)}>
+              {tasks.map(({ value, label }) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
           </p>
         </div>
 
-        <section className="chart-section">
+        <DashboardMetrics />
+
+        {/* <section className="chart-section">
           <div className="chart-box">
             <h3>Disparity Fairness</h3>
             <PieChart
@@ -66,7 +91,7 @@ const EvaluatePage = () => {
               lineWidth={40}
             />
           </div>
-        </section>
+        </section> */}
 
         <button onClick={() => navigate("/debias")}>Next: Make Fair →</button>
       </main>
