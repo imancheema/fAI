@@ -1,0 +1,100 @@
+.dashboard-metrics {
+  background: #f5f0fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(150, 120, 180, 0.15);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  font-family: "Barlow", sans-serif;
+  color: #4b2c7f;
+}
+
+.metrics-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.metric {
+  background: #f8f5fd;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(130, 100, 170, 0.1);
+  transition: box-shadow 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.metric:hover {
+  box-shadow: 0 6px 18px rgba(130, 100, 170, 0.25);
+}
+
+.metric h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #6c4bb1;
+  font-family: "Barlow", sans-serif;
+}
+
+.metric p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #3c2e65;
+}
+
+.confusion-matrix {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confusion-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #3c2e65;
+}
+
+.confusion-matrix th,
+.confusion-matrix td {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #d1c4e9;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.confusion-matrix thead th {
+  background-color: #c5bae8;
+  color: #3c2e65;
+}
+
+.confusion-matrix tbody tr:nth-child(odd) {
+  background-color: #ede7f6;
+}
+
+@media (max-width: 480px) {
+  .dashboard-metrics {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .metrics-row {
+    flex-direction: column;
+  }
+
+  .metric {
+    margin-bottom: 1rem;
+  }
+
+  .metric p,
+  .metric h3 {
+    font-size: 1rem;
+  }
+
+  .confusion-matrix th,
+  .confusion-matrix td {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
