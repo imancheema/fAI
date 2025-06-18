@@ -1,18 +1,90 @@
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem;
+.upload-bg {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(120deg, #f3eaff, #faf7ff, #a783f7, #f3eaff);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.blob-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.19;
+  filter: blur(12px);
+  animation: blobMove 24s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 400px; height: 400px;
+  left: -100px; top: 40px;
+  background: #a783f7;
+  animation-delay: 0s;
+}
+.blob2 {
+  width: 300px; height: 300px;
+  right: -80px; top: 300px;
+  background: #a783f7;
+  animation-delay: 6s;
+}
+.blob3 {
+  width: 250px; height: 250px;
+  left: 60%; bottom: -120px;
+  background: #7e57c2;
+  animation-delay: 12s;
+}
+
+@keyframes blobMove {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-60px) scale(1.12);}
+}
+
+.upload-card {
+  background: rgba(255,255,255,0.88);
+  border-radius: 2rem;
+  box-shadow: 0 8px 40px rgba(126,87,194,0.13), 0 1.5px 6px rgba(162,89,255,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .upload-card {
+    border-radius: 1rem;
+    padding: 1.2rem 0.5rem;
+  }
 }
 
 section {
   margin-bottom: 2rem;
 }
-
 h2 {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   margin-bottom: 0.5rem;
+  color: #7e57c2;
+  font-weight: 800;
 }
-
 p {
   margin: 0.5rem 0;
   line-height: 1.5;
@@ -30,6 +102,8 @@ p {
   box-shadow: 0 4px 12px rgba(180, 140, 255, 0.1);
   color: #5c4a82;
   font-size: 1.1rem;
+  outline: none;
+  position: relative;
 }
 
 [role="button"]:hover {
@@ -38,64 +112,188 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(180, 140, 255, 0.15);
 }
-
 [role="button"]:focus {
-  outline: none;
+  outline: 2px solid #7e57c2;
   border-color: #7e57c2;
   background-color: #f2e8ff;
 }
-
 [role="button"].drag-active {
   background-color: #eee4ff;
   border-color: #7e57c2;
+  box-shadow: 0 0 0 4px #d1bfff, 0 6px 20px rgba(126, 87, 194, 0.08);
+  transition: box-shadow 0.2s;
 }
-
-/* Optional icon in the upload area */
 .upload-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   opacity: 0.7;
 }
-
 [role="button"],
 button {
   font-family: "Barlow", sans-serif;
 }
-
-/* Hidden file input */
 input[type="file"] {
   display: none;
 }
-
-/* Progress bar */
 .upload-progress {
-  height: 10px;
-  background-color: #ccc;
-  margin-bottom: 1rem;
-  position: relative;
+  height: 12px;
+  background-color: #ebe1fa;
+  border-radius: 8px;
+  margin-bottom: 1.3rem;
   overflow: hidden;
+  position: relative;
 }
-
 .upload-progress > div {
   height: 100%;
-  background-color: var(--button-color);
-  width: 0%;
-  transition: width 0.3s ease-in-out;
+  background: linear-gradient(90deg, var(--button-color) 60%, var(--secondary) 100%);
+  border-radius: 8px;
+  transition: width 0.3s;
 }
-
-/* Upload button */
+.upload-progress p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 0.96rem;
+  color: #7e57c2;
+  font-weight: 600;
+}
 button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: var(--button-color);
-  color: white;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, var(--button-color) 70%, var(--secondary) 100%);
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
   font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(126, 87, 194, 0.13);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.14s;
+  margin-top: 1.2rem;
 }
-
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg, var(--button-hover) 60%, var(--secondary) 100%);
+  box-shadow: 0 8px 32px rgba(126, 87, 194, 0.22);
+  transform: scale(1.05);
+}
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+@media (max-width: 600px) {
+  .upload-card {
+    padding: 1rem;
+  }
+  [role="button"] {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+
+/* Add this below your current CSS */
+
+/* Personalized/contextual greeting row */
+.greeting-row {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #7e57c2;
+  margin-bottom: 1.2rem;
+  background: rgba(243, 234, 255, 0.7);
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(126, 87, 194, 0.04);
+}
+
+.greeting-link {
+  color: #a783f7;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.greeting-link:hover {
+  color: #7e57c2;
+}
+
+/* Enhanced file card feedback */
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f3eaff;
+  border-radius: 12px;
+  padding: 0.85rem 1.2rem;
+  margin: 0.7rem 0 1.2rem 0;
+  box-shadow: 0 2px 8px rgba(126, 87, 194, 0.07);
+  position: relative;
+  font-size: 1.08rem;
+}
+.file-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.file-name {
+  flex: 1;
+  color: #7e57c2;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  color: #a783f7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  transition: color 0.18s, transform 0.15s;
+}
+.remove-btn:hover {
+  color: #7e57c2;
+  transform: scale(1.2);
+}
+
+/* Responsive fix for blobs and card overflow */
+@media (max-width: 900px) {
+  .blob1, .blob2, .blob3 {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+@media (max-width: 600px) {
+  .upload-card {
+    padding: 1rem;
+  }
+  [role="button"] {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+  .greeting-row {
+    font-size: 0.97rem;
+    padding: 0.55rem 0.7rem;
+  }
+  .file-card {
+    font-size: 0.98rem;
+    padding: 0.7rem 0.7rem;
+  }
+}
+
+
+:root {
+  --primary: #7e57c2;
+  --secondary: #a783f7;
+  --accent: #f3eaff;
+  --background: #faf7ff;
+  --button-color: #7e57c2;
+  --button-hover: #5a3880;
+  --text-main: #32000c;
+  --text-muted: #3c2e65;
+  --focus-outline: #a783f7;
+}
+
+

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUpload, FaChartBar, FaTools } from "react-icons/fa";
+// import { FaUpload, FaChartBar, FaTools } from "react-icons/fa";
 import "./Steps.css";
 
 const Steps: React.FC = () => {
@@ -7,21 +7,24 @@ const Steps: React.FC = () => {
     <div className="steps-timeline">
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Upload icon">
-          <FaUpload />
+           {/* <FaUpload /> */}
+           ⬆️
         </span>
         Upload
       </div>
       <span className="steps-timeline-arrow">→</span>
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Dashboard icon">
-          <FaChartBar />
+          {/* <FaChartBar /> */}
+          📊
         </span>
         Dashboard
       </div>
       <span className="steps-timeline-arrow">→</span>
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Debias icon">
-          <FaTools />
+          {/* <FaTools /> */}
+          🛠️
         </span>
         Debias
       </div>
