@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import "./Navbar.css";
-import { MdChatBubbleOutline } from "react-icons/md";
 
 function Navbar() {
   const location = useLocation();
@@ -30,6 +29,18 @@ function Navbar() {
           >
             About
           </Link>
+          <Link
+            to="/upload-instructions"
+            className={location.pathname === "/upload-instructions" ? "active" : ""}
+          >
+            Upload Instructions
+          </Link>
+          <Link
+            to="/faq"
+            className={location.pathname === "/faq" ? "active" : ""}
+          >
+            FAQ
+          </Link>
           <button className="contact-btn" onClick={() => setShowForm(true)}>
             Contact Us
           </button>
@@ -49,7 +60,7 @@ function Navbar() {
                   display: "inline-flex",
                 }}
               >
-                <MdChatBubbleOutline />
+                💬
               </span>
               Let's Chat
             </h2>
