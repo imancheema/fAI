@@ -1,8 +1,90 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useModelContext } from "../contexts/ModelContext";
-import "./EvaluatePage.css";
 import robotImg from "../assets/robot2.png";
+import "./EvaluatePage.css";
+
+// FAQ Data
+const faqs = [
+  {
+    question: "How fast can I get a fairness-certified model?",
+    answer: "Most models are certified in under a week. For urgent cases, contact us for priority processing.",
+  },
+  {
+    question: "What file formats do you accept?",
+    answer: "We accept most common model formats including .pkl, .joblib, .onnx, and .h5. See our Upload Instructions page for details.",
+  },
+  {
+    question: "Is my data confidential?",
+    answer: "Absolutely. All files are handled securely and confidentially. We never share your data.",
+  },
+  {
+    question: "What happens after I choose a service tier?",
+    answer: "Our team will contact you within one business day to confirm details and begin the debiasing process.",
+  },
+];
+
+const FAQSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+
+  return (
+    <div className="faq-section" style={{ maxWidth: 700, margin: "2rem auto 0", background: "#fff6f8", borderRadius: 16, padding: "2rem" }}>
+      <h3 style={{ textAlign: "center", color: "#32000c", marginBottom: 24 }}>Frequently Asked Questions</h3>
+      <ul style={{ listStyle: "none", padding: 0 }}>
+        {faqs.map((faq, i) => (
+          <li key={i} style={{ marginBottom: 18 }}>
+            <button
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              aria-expanded={openIndex === i}
+              style={{
+                width: "100%",
+                textAlign: "left",
+                background: "#ffe6ef",
+                border: "none",
+                borderRadius: 8,
+                padding: "1rem",
+                fontWeight: 600,
+                color: "#ea2a5d",
+                fontSize: "1.08rem",
+                cursor: "pointer",
+                boxShadow: openIndex === i ? "0 2px 8px #ea2a5d22" : "none",
+                transition: "box-shadow 0.2s"
+              }}
+            >
+              {faq.question}
+            </button>
+            {openIndex === i && (
+              <div style={{
+                background: "#fff",
+                borderRadius: "0 0 8px 8px",
+                padding: "1rem",
+                color: "#32000c",
+                border: "1px solid #ffe6ef",
+                borderTop: "none"
+              }}>
+                {faq.answer}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <div style={{ textAlign: "center", marginTop: 24 }}>
+        <a
+          href="/upload-instructions"
+          style={{
+            color: "#ea2a5d",
+            fontWeight: 600,
+            textDecoration: "underline",
+            fontSize: "1.05rem"
+          }}
+        >
+          See Upload Instructions
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const MakeFairPage = () => {
   const [submittedTier, setSubmittedTier] = useState<"tier1" | "tier2" | null>(null);
@@ -181,6 +263,9 @@ const MakeFairPage = () => {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <FAQSection />
     </div>
   );
 };

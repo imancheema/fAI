@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { MdCheckCircle, MdBuild, MdPeople } from "react-icons/md";
-import { GiAchievement } from "react-icons/gi";
+// import { MdCheckCircle, MdBuild, MdPeople } from "react-icons/md";
+// import { GiAchievement } from "react-icons/gi";
 import "./Debias.css";
 import Steps from "../components/Steps";
 
 const Debias = () => {
-  const [chosenTiers, setChosenTiers] = useState<{ [key: number]: boolean }>(
-    {}
-  );
+  const [chosenTiers, setChosenTiers] = useState<{ [key: number]: boolean }>({});
 
   const handleChooseTier = (tier: number) => {
     setChosenTiers((prev) => ({ ...prev, [tier]: true }));
@@ -25,28 +23,20 @@ const Debias = () => {
 
       <section className="tier-card">
         <h3 className="tier-title">
-          <span className="tier-icon">
-            <MdBuild />
-          </span>
+          <span className="tier-icon">🔧</span>
           Tier 1: We Debias For You
         </h3>
         <ul>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             We manage the entire debiasing process using our expertise and data
           </li>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             Fast delivery with minimal involvement from your team
           </li>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             Receive a validated, fairness-certified model ready for deployment
           </li>
         </ul>
@@ -67,29 +57,21 @@ const Debias = () => {
 
       <section className="tier-card">
         <h3 className="tier-title">
-          <span className="tier-icon">
-            <MdPeople />
-          </span>
+          <span className="tier-icon">👥</span>
           Tier 2: Work With Us
         </h3>
         <ul>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             Work closely with our team to improve your model’s fairness
           </li>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             Gain hands-on support with adversarial training and fairness
             techniques
           </li>
           <li>
-            <span className="icon">
-              <MdCheckCircle />
-            </span>
+            <span className="icon">✔️</span>
             Establish infrastructure to integrate fairness into your ongoing
             workflows
           </li>
@@ -110,9 +92,7 @@ const Debias = () => {
       </section>
 
       <div className="fair-ai-badge-info">
-        <span className="tier-icon-badge">
-          <GiAchievement />
-        </span>
+        <span className="tier-icon-badge">🏆</span>
         <strong>Showcase Your Commitment:</strong> Companies that work with us
         can display a <span className="badge-label">“Fair AI”</span> badge to
         highlight their dedication to responsible AI.
