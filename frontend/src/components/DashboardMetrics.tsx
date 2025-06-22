@@ -2,7 +2,11 @@ import React from "react";
 import "./DashboardMetrics.css";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
-import { FaQuestionCircle } from "react-icons/fa";
+import {
+  FaQuestionCircle,
+  FaExclamationTriangle,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 type MetricCardProps = {
   title: string;
@@ -129,6 +133,10 @@ const DashboardMetrics: React.FC = () => {
         Model insight:
       </p>
       <p className="bias-explanation-text">
+        <span
+          className="bias-dot"
+          style={{ backgroundColor: "#dc2626" }}
+        ></span>
         <span className="highlight-high">High bias</span> means the AI makes
         more errors for some groups, which might lead to unfair outcomes.
       </p>
@@ -143,6 +151,10 @@ const DashboardMetrics: React.FC = () => {
         Model insight:
       </p>
       <p className="bias-explanation-text">
+        <span
+          className="bias-dot"
+          style={{ backgroundColor: "#eab308" }}
+        ></span>
         <span className="highlight-medium">Medium bias</span> means qualified
         candidates from certain groups have fewer opportunities.
       </p>
@@ -152,22 +164,20 @@ const DashboardMetrics: React.FC = () => {
   return (
     <div>
       <div className="bias-legend">
+        <h3 className="legend-title" style={{ fontWeight: 500 }}>
+          {/* @ts-ignore */}
+          <FaQuestionCircle style={{ color: "#7e57c2", marginRight: 8 }} />
+          Score Legend
+        </h3>
         <p>
-          <h3 className="legend-title">
-            {/* @ts-ignore */}
-            <FaQuestionCircle
-              className="legend-icon"
-              style={{ color: "#7c3aed", marginRight: 8 }}
-            />
-            Score Legend
-          </h3>
-          Lower % = <span className="highlight-high">higher bias</span> ⚠
+          {/* @ts-ignore */}
+          <FaExclamationTriangle style={{ color: "#dc2626", marginRight: 6 }} />
+          Lower % = <span className="highlight-high">higher bias</span>
           <br />
+          {/* @ts-ignore */}
+          <FaCheckCircle style={{ color: "#16a34a", marginRight: 6 }} />
           Higher % ={" "}
-          <span style={{ color: "#16a34a", fontWeight: 600 }}>
-            lower bias
-          </span>{" "}
-          ✔
+          <span style={{ color: "#16a34a", fontWeight: 600 }}>lower bias</span>
         </p>
       </div>
 
