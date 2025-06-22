@@ -1,100 +1,97 @@
-.dashboard-metrics {
-  background: #f5f0fa;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(150, 120, 180, 0.15);
-  max-width: 600px;
-  margin: 1.5rem auto;
-  font-family: "Barlow", sans-serif;
-  color: #4b2c7f;
-}
-
-.metrics-row {
+.dashboard-container {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.metric {
-  background: #f8f5fd;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(130, 100, 170, 0.1);
-  transition: box-shadow 0.3s ease;
-  flex: 1;
-  text-align: center;
-}
-
-.metric:hover {
-  box-shadow: 0 6px 18px rgba(130, 100, 170, 0.25);
-}
-
-.metric h3 {
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-  color: #6c4bb1;
+  gap: 24px;
+  justify-content: center;
+  margin: 40px 20px;
   font-family: "Barlow", sans-serif;
 }
 
-.metric p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #3c2e65;
+.card {
+  background: #f3f3fc;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(127, 91, 206, 0.3);
+  padding: 24px 32px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
 }
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 8px 20px rgba(108, 70, 197, 0.5);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-family: "barlow", sans-serif;
+  color: #613fac;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7e4fc4;
+}
+
+/* Progress Bar */
+
+.progress-bar-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  margin-top: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.6s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bias-label {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Confusion Matrix */
 
 .confusion-matrix {
-  max-width: 480px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.confusion-matrix table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
-  color: #3c2e65;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #5a3e9e;
 }
 
 .confusion-matrix th,
 .confusion-matrix td {
-  padding: 0.6rem 1rem;
-  border: 1.5px solid #d1c4e9;
-  font-weight: 500;
-  border-radius: 6px;
+  border: 1.5px solid #b3a0ff;
+  padding: 8px 12px;
 }
 
-.confusion-matrix thead th {
-  background-color: #c5bae8;
-  color: #3c2e65;
-}
-
-.confusion-matrix tbody tr:nth-child(odd) {
-  background-color: #ede7f6;
-}
-
-@media (max-width: 480px) {
-  .dashboard-metrics {
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  .metrics-row {
-    flex-direction: column;
-  }
-
-  .metric {
-    margin-bottom: 1rem;
-  }
-
-  .metric p,
-  .metric h3 {
-    font-size: 1rem;
-  }
-
-  .confusion-matrix th,
-  .confusion-matrix td {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.9rem;
-  }
+.confusion-matrix th {
+  background: #d6c9ff;
+  font-weight: 600;
+  color: #4c1d95;
 }
