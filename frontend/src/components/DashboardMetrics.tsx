@@ -119,10 +119,10 @@ const DashboardMetrics: React.FC = () => {
   const equalOpportunity = 65.6;
 
   const confusionMatrix = {
-    truePositive: 72,
-    falsePositive: 15,
-    trueNegative: 185,
-    falseNegative: 28,
+    truePositive: 1280,
+    falsePositive: 1157,
+    trueNegative: 96184,
+    falseNegative: 448,
   };
 
   const equalizedOddsBiasExplanation = (
@@ -181,20 +181,20 @@ const DashboardMetrics: React.FC = () => {
         </p>
       </div>
 
-      {/* This is the flex container for the cards ONLY */}
       <div className="dashboard-container">
-        <MetricCard
-          title="Equalized Odds"
-          value={equalizedOdds}
-          description="Checks if the AI makes mistakes fairly across all groups. One group should not face more errors than another."
-          biasExplanation={equalizedOddsBiasExplanation}
-        />
         <MetricCard
           title="Equal Opportunity"
           value={equalOpportunity}
           description="Checks if qualified individuals from different groups have an equal chance of being selected."
           biasExplanation={equalOpportunityBiasExplanation}
         />
+        <MetricCard
+          title="Equalized Odds"
+          value={equalizedOdds}
+          description="Checks if the AI makes mistakes fairly across all groups. One group should not face more errors than another."
+          biasExplanation={equalizedOddsBiasExplanation}
+        />
+
         <ConfusionMatrixCard
           title="Confusion Matrix"
           description="Shows how well the AI predicted outcomes by comparing its predictions to actual results."
