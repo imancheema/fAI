@@ -3,6 +3,7 @@ import React from "react";
 import heroImg from "../assets/hero.png";
 import "./LandingPage.css";
 import "../App.css";
+import landingImg from "../assets/landingImg.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +31,7 @@ const LandingPage = () => {
           </div>
           <div className="image-section">
             <img
-              src={heroImg}
+              src={landingImg}
               alt="Friendly robot analyzing resumes"
               className="hero-robot bounce-animation"
             />

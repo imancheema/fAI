@@ -1,5 +1,5 @@
 import React from "react";
-import equityImg from "../assets/equity.png";
+import teamPhoto from "../assets/TeamPhoto.png";
 import "./ProblemPage.css";
 
 const AboutPage = () => (
@@ -16,11 +16,11 @@ const AboutPage = () => (
         We believe that everyone deserves a fair chance to showcase their
         talents, and our tools aim to support more equitable hiring practices.
       </p>
-      {/* <img
-        src={equityImg}
+      <img
+        src={teamPhoto}
         alt="Equity illustration"
         className="content-image"
-      /> */}
+      />
     </div>
   </div>
 );

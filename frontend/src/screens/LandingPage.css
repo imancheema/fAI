@@ -70,7 +70,7 @@
 
 .image-section {
   flex: 1;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .hero-robot {

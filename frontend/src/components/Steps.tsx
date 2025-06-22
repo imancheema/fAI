@@ -7,6 +7,7 @@ const Steps: React.FC = () => {
     <div className="steps-timeline">
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Upload icon">
+          {/* @ts-ignore */}
           <FaUpload />
         </span>
         Upload
@@ -14,6 +15,7 @@ const Steps: React.FC = () => {
       <span className="steps-timeline-arrow">→</span>
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Dashboard icon">
+          {/* @ts-ignore */}
           <FaChartBar />
         </span>
         Dashboard
@@ -21,6 +23,7 @@ const Steps: React.FC = () => {
       <span className="steps-timeline-arrow">→</span>
       <div className="steps-timeline-step">
         <span className="steps-icon" aria-label="Debias icon">
+          {/* @ts-ignore */}
           <FaTools />
         </span>
         Debias

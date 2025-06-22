@@ -29,7 +29,7 @@ const EvaluatePage = () => {
       <main>
         <Steps />
         <section>
-          <h2>Fairness Evaluation</h2>
+          <h2>Let’s check for bias</h2>
           <p>
             Evaluate how fair your resume screening model is across different
             groups.
