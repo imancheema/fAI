@@ -10,6 +10,7 @@ import SolutionPage from "./screens/SolutionPage";
 import AboutPage from "./screens/AboutPage";
 import MakeFair from "./screens/MakeFair";
 import Debias from "./screens/Debias";
+import MetricsPage from "./screens/MetricsPage";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <Route path="/debias" element={<Debias />} />
           <Route path="/problem" element={<ProblemPage />} />
           <Route path="/solution" element={<SolutionPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/aboutus" element={<AboutPage />} />
+          <Route path="/metrics" element={<MetricsPage />} />
         </Routes>
       </Router>
     </ModelProvider>

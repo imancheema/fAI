@@ -25,11 +25,19 @@ function Navbar() {
             Problem
           </Link>
           <Link
-            to="/about"
-            className={location.pathname === "/about" ? "active" : ""}
+            to="/aboutus"
+            className={location.pathname === "/aboutus" ? "active" : ""}
           >
-            About
+            About Us
           </Link>
+
+          <Link
+            to="/metrics"
+            className={location.pathname === "/metrics" ? "active" : ""}
+          >
+            Metrics
+          </Link>
+
           <button className="contact-btn" onClick={() => setShowForm(true)}>
             Contact Us
           </button>

@@ -2,7 +2,7 @@ import React from "react";
 import teamPhoto from "../assets/TeamPhoto.png";
 import "./ProblemPage.css";
 
-const AboutPage = () => (
+const AboutUsPage = () => (
   <div className="page-wrapper">
     <div className="content-container">
       <h1 className="problem-title">Who Are We?</h1>
@@ -25,4 +25,4 @@ const AboutPage = () => (
   </div>
 );
 
-export default AboutPage;
+export default AboutUsPage;
