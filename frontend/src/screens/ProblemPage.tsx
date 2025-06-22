@@ -1,14 +1,11 @@
 import React from "react";
 import "./ProblemPage.css";
-import biasImg from "../assets/bias-example.png"; // optional if you still want to include this image
 import Problem from "../assets/problem.png";
 const ProblemPage = () => {
   return (
     <div className="page-wrapper">
       <div className="content-container">
-        <h1 className="problem-title">
-          Tackling Bias in Resume Screening: Building a Fairer Hiring Future
-        </h1>
+        <h1 className="problem-title">Tackling Bias in Resume Screening</h1>
         <p className="image-caption">
           A stack of resumes overlaid with algorithmic patterns.
         </p>
