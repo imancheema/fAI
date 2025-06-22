@@ -99,3 +99,25 @@ button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.uploading-status {
+  font-size: 1rem; /* slightly larger */
+  font-weight: 500; /* bolder */
+  color: var(--primary-color); /* white text for contrast */
+  font-family: "Barlow", sans-serif;
+  margin: 20px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.uploading-status {
+  animation: pulse 1.6s infinite ease-in-out;
+}

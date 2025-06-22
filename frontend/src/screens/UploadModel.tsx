@@ -73,7 +73,7 @@ function UploadModel() {
         <section>
           <h2>Upload your model</h2>
           <p>
-            Select your .pkl file and click Evaluate to check for fairness. We
+            Select your .zip file and click Evaluate to check for fairness. We
             do not store any files.
           </p>
           <p>
@@ -119,9 +119,7 @@ function UploadModel() {
         </div>
 
         {uploading && (
-          <div>
-            <p>Uploading... {progress}%</p>
-          </div>
+          <div className="uploading-status">Uploading... {progress}%</div>
         )}
 
         <button onClick={handleUpload} disabled={uploading}>
