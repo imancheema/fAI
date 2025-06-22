@@ -26,6 +26,7 @@ const Debias = () => {
       <section className="tier-card">
         <h3 className="tier-title">
           <span className="tier-icon">
+            {/* @ts-ignore */}
             <MdBuild />
           </span>
           Tier 1: We Debias For You
@@ -33,18 +34,21 @@ const Debias = () => {
         <ul>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             We manage the entire debiasing process using our expertise and data
           </li>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             Fast delivery with minimal involvement from your team
           </li>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             Receive a validated, fairness-certified model ready for deployment
@@ -68,6 +72,7 @@ const Debias = () => {
       <section className="tier-card">
         <h3 className="tier-title">
           <span className="tier-icon">
+            {/* @ts-ignore */}
             <MdPeople />
           </span>
           Tier 2: Work With Us
@@ -75,12 +80,14 @@ const Debias = () => {
         <ul>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             Work closely with our team to improve your model’s fairness
           </li>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             Gain hands-on support with adversarial training and fairness
@@ -88,6 +95,7 @@ const Debias = () => {
           </li>
           <li>
             <span className="icon">
+              {/* @ts-ignore */}
               <MdCheckCircle />
             </span>
             Establish infrastructure to integrate fairness into your ongoing
@@ -111,6 +119,7 @@ const Debias = () => {
 
       <div className="fair-ai-badge-info">
         <span className="tier-icon-badge">
+          {/* @ts-ignore */}
           <GiAchievement />
         </span>
         <strong>Showcase Your Commitment:</strong> Companies that work with us

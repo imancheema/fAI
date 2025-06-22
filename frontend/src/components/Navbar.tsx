@@ -49,6 +49,7 @@ function Navbar() {
                   display: "inline-flex",
                 }}
               >
+                {/* @ts-ignore */}
                 <MdChatBubbleOutline />
               </span>
               Let's Chat

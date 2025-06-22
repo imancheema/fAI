@@ -110,6 +110,7 @@ function UploadModel() {
           ) : (
             <div style={{ textAlign: "center" }}>
               <span className="upload-icon" aria-label="Upload icon">
+                {/* @ts-ignore */}
                 <FaUpload />
               </span>
               <p>Click or drop your file here</p>
