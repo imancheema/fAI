@@ -25,8 +25,8 @@ function Navbar() {
             Problem
           </Link>
           <Link
-            to="/aboutus"
-            className={location.pathname === "/aboutus" ? "active" : ""}
+            to="/about"
+            className={location.pathname === "/about" ? "active" : ""}
           >
             About Us
           </Link>
